@@ -1,0 +1,27 @@
+{
+  "name": "vue-sfc-compiler2",
+  "version": "1.0.0",
+  "description": "vue single file compiler",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvs-template/vue-sfc-compiler2.git"
+  },
+  "keywords": [
+    "vue",
+    "sfc",
+    "compiler"
+  ],
+  "author": "Billow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvs-template/vue-sfc-compiler2/issues"
+  },
+  "homepage": "https://github.com/rvs-template/vue-sfc-compiler2#readme",
+  "dependencies": {
+    "vue-template-compiler": "^2.5.17"
+  }
+}
