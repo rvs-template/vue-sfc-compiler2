@@ -4,7 +4,8 @@
   "description": "vue single file compiler",
   "main": "index.js",
   "scripts": {
-    "build": "babel "
+    "build": "babel src --out-dir lib",
+    "release": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,13 @@
   },
   "homepage": "https://github.com/rvs-template/vue-sfc-compiler2#readme",
   "dependencies": {
-    "vue-template-compiler": "^2.5.17"
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "vue-template-compiler": "^2.5.17",
+    "vue-template-es2015-compiler": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
