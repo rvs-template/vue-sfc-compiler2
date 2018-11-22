@@ -16,6 +16,6 @@ export default function parse(template, config = {}) {
   });
 
   return {
-    
+    render: compilerES2015(`function() { ${compiled.render} }`)
   }
 }
