@@ -15,7 +15,25 @@ export default function parse(template, config = {}) {
     ...config
   });
 
-  return {
-    render: compilerES2015(`function() { ${compiled.render} }`)
+  if (compiled.errors.length) {
+    throw new Error(
+      `\n  Error compiling template:\n${pad(html)}\n` +
+        compiled.errors.map(e => `  - ${e}`).join('\n') +
+        '\n'
+    );
   }
+  return {
+    render: toFunction(compiled.render),
+    staticRenderFns: `[${compiled.staticRenderFns.map(toFunction).join(',')}]`
+  }
+}
+
+function toFunction(code) {
+  return compilerES2015(
+    `var TEMP_VAR = function (){${code}}`
+  ).replace('var TEMP_VAR = ', '');
+}
+
+function pad(html) {
+  return html.split(/\r?\n/).map(line => `  ${line}`).join('\n');
 }
