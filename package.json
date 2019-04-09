@@ -1,6 +1,6 @@
 {
   "name": "vue-sfc-compiler2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "vue single file compiler",
   "main": "lib/index.js",
   "scripts": {
@@ -22,14 +22,12 @@
     "url": "https://github.com/rvs-template/vue-sfc-compiler2/issues"
   },
   "homepage": "https://github.com/rvs-template/vue-sfc-compiler2#readme",
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/core": "^7.4.3",
     "vue-template-compiler": "^2.5.17",
     "vue-template-es2015-compiler": "^1.6.0"
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0"
-  }
+  "dependencies": {}
 }
